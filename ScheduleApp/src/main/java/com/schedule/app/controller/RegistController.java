@@ -22,12 +22,12 @@ public class RegistController{
   }
 
     @RequestMapping("/register/create")
-    public ModelAndView regist(ModelAndView mav, @RequestParam("schedule") String schedule, @RequestParam("start") String start,@RequestParam("end") String end,@RequestParam("date") String date){
-        mav.setViewName("register");
+    public String regist(ModelAndView mav, @RequestParam("schedule") String schedule, @RequestParam("start") String start,@RequestParam("end") String end,@RequestParam("date") String date){
+        
         String title = schedule + " "+start + "~" + end;
         ScheduleData sd = new ScheduleData(title,date);
         scheduleRepository.saveAndFlush(sd);
-        return mav;
+        return "redirect:/top";
   }
     
 }
