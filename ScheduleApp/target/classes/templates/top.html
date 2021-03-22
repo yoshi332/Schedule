@@ -11,15 +11,15 @@
 
   $(document).ready(function() {
     $('#calendar').fullCalendar({
-      events: [
-        {title:"test1",start:"2021-03-22",end:"2018-11-01"},
-        {title:"test2",start:"2021-03-25",end:"2018-09-01T00:01:00"}
-      ],
+      events: {
+        url : '/api/events'
+    },
       dayClick: function(date, jsEvent, view) {
-          alert('Clicked on: ' + date.format());
+        location.href = 'http://127.0.0.1:8080/register?date=' + date.format();
+     
     },
     eventClick: function(item, jsEvent, view) {
-        alert('Clicked on: ' + item.title);
+        alert(item.title, item.content);
     }
     });
   });
