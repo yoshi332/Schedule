@@ -26,7 +26,7 @@ public class EventApiController {
          
             Iterable<ScheduleData> entity = scheduleRepository.findAll();
             for(ScheduleData data: entity){
-                Event event = new Event(data.title, data.date);
+                Event event = new Event(data.id, data.title, data.date);
                 events.add(event);
             }
 
