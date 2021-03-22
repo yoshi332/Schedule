@@ -12,24 +12,45 @@ public class ScheduleData {
     @Id
     @GeneratedValue
     protected Integer id;
-    protected String name;
-    protected String mail;
-    protected String tel;
-    protected int age;
+    protected String title;
+    protected String start;
+    protected String end;
+
      
     public ScheduleData(){
     }
      
-    public ScheduleData(String name, String mail,
-            String tel, int age){
-        this.name = name;
-        this.mail = mail;
-        this.tel = tel;
-        this.age = age;
+    public ScheduleData(String title, String start,String end){
+        this.title = title;
+        this.start = start;
+        this.end = end;
+    
     }
      
-    public String toString(){
-        return "[name:" + name + ", mail:" + mail+
-            ", tel:" + tel + ", age:" + age + "]";
+    //getter メソッド
+    public String getTitle(){
+        return this.title;
+    }
+
+    public String getStart(){
+        return this.start;
+    }
+
+    public String getEnd(){
+        return this.end;
+    }
+
+    //setter メソッド
+    public void setTitle(String title){
+        this.title = title;
+    }
+
+    public void setStart(String start){
+        this.start = start;
+    }
+
+    public void setEnd(String end){
+        this.end = end;
+        
     }
 }

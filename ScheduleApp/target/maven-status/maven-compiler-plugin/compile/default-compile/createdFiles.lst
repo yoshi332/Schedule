@@ -1,3 +1,5 @@
 com/schedule/app/ScheduleData.class
-com/schedule/app/App.class
 com/schedule/app/AppController.class
+com/schedule/app/ScheduleRepository.class
+com/schedule/app/EventApiController.class
+com/schedule/app/App.class
