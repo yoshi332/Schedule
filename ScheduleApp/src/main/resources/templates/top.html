@@ -15,7 +15,8 @@
         url : '/api/events'
     },
       dayClick: function(date, jsEvent, view) {
-          alert('Clicked on: ' + date.format());
+        location.href = 'http://127.0.0.1:8080/register?date=' + date.format();
+     
     },
     eventClick: function(item, jsEvent, view) {
         alert(item.title, item.content);

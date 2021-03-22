@@ -13,17 +13,22 @@ public class ScheduleData {
     @GeneratedValue
     protected Integer id;
     protected String title;
-    protected String start;
-    protected String end;
+    protected String date;
+ 
 
      
     public ScheduleData(){
     }
      
-    public ScheduleData(String title, String start,String end){
+    public ScheduleData(String title){
         this.title = title;
-        this.start = start;
-        this.end = end;
+
+    
+    }
+    public ScheduleData(String title, String date){
+        this.title = title;
+        this.date = date;
+ 
     
     }
      
@@ -32,25 +37,20 @@ public class ScheduleData {
         return this.title;
     }
 
-    public String getStart(){
-        return this.start;
+    public String getDate(){
+        return this.date;
     }
 
-    public String getEnd(){
-        return this.end;
-    }
+
 
     //setter メソッド
     public void setTitle(String title){
         this.title = title;
     }
 
-    public void setStart(String start){
-        this.start = start;
-    }
+  
+    public void setDate(String date){
+        this.date = date;
 
-    public void setEnd(String end){
-        this.end = end;
-        
     }
 }

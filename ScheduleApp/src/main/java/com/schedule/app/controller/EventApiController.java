@@ -22,8 +22,13 @@ public class EventApiController {
     public String getEvents() {
         String jsonMsg = null;
         try {
+            List<Event> events = new ArrayList<Event>();
          
-            List<ScheduleData> events = scheduleRepository.findAll();
+            Iterable<ScheduleData> entity = scheduleRepository.findAll();
+            for(ScheduleData data: entity){
+                Event event = new Event(data.title, data.date);
+                events.add(event);
+            }
 
             // FullCalendarにエンコード済み文字列を渡す
             ObjectMapper mapper = new ObjectMapper();
