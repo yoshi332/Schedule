@@ -19,7 +19,7 @@
      
     },
     eventClick: function(item, jsEvent, view) {
-        alert(item.title, item.content);
+        location.href = 'http://127.0.0.1:8080/delete?delete_id=' + String(item.id);
     }
     });
   });

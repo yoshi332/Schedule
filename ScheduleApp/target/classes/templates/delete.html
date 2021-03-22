@@ -1,0 +1,27 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Schedule Calendar</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link th:href="@{/css/register.css}" rel="stylesheet" type="text/css">
+<script src="webjars/jquery/2.0.3/jquery.min.js"></script>
+<script src='webjars/moment/2.19.1/min/moment.min.js'></script>
+<script src='webjars/fullcalendar/3.5.1/dist/fullcalendar.js'></script>
+</head>
+
+
+<body>
+    <form method="GET" action="delete/del">
+    <div class="Form">
+        <div class="Form-Item">
+            <p class="Form-Item-Label"><span class="Form-Item-Label-Required">注意!</span>予定</p>
+            <input type="text" name="title" class="Form-Item-Input" th:value="${delInstance.title}" readonly>
+            <input type="hidden" name="del-id" class="Form-Item-Input" th:value="${delInstance.id}" readonly>
+          </div>   
+        <div class="Form-Item">
+     
+        <input type="submit" class="Form-Btn" value="削除">
+      </div>
+    </form>
+</body>
+</html>

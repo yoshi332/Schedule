@@ -19,6 +19,7 @@ public class ScheduleData {
      
     public ScheduleData(){
     }
+
      
     public ScheduleData(String title){
         this.title = title;
@@ -33,6 +34,10 @@ public class ScheduleData {
     }
      
     //getter メソッド
+
+    public Integer getId(){
+        return this.id;
+    }
     public String getTitle(){
         return this.title;
     }
@@ -44,6 +49,9 @@ public class ScheduleData {
 
 
     //setter メソッド
+    public void setId(Integer id){
+        this.id = id;
+    }
     public void setTitle(String title){
         this.title = title;
     }
